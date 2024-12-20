@@ -1,0 +1,140 @@
+.my-button {
+  white-space: nowrap;
+  padding: 8px 16px;
+  font-weight: 500;
+  font-size: 14px !important;
+  line-height: 2;
+  font-family: 'Inter', sans-serif;
+  border-radius: 8px !important;
+  gap: 8px;
+}
+
+
+.my-button.ant-btn {
+  height: 36px;
+}
+
+.primary-button {
+  background-color: #ed4e6b;
+  color: #fff !important;
+  border-top-width: 0px !important;
+  border-left-width: 0px !important;
+  border-right-width: 0px !important;
+  border-bottom-width: 2px !important;
+  border-color: #ab112e;
+  color: #fff !important;
+
+  &:hover {
+    background-color: #f07087 !important;
+    border-color: #e65747;
+    background: #ffffff;
+  }
+}
+
+.ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover,
+.ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):hover {
+  border-color: #e65747;
+  background: #ffffff;
+}
+
+.secondary-button {
+  background-color: #57534e !important;
+  border-top-width: 0px !important;
+  border-left-width: 0px !important;
+  border-right-width: 0px !important;
+  border-bottom-width: 2px !important;
+  border-color: #292524 !important;
+  color: #fff !important;
+
+  &:hover {
+    background-color: #a8a29e !important;
+  }
+}
+
+.outline-button {
+  background-color: #fff !important;
+  border: 1px solid #d6d3d1 !important;
+  color: #292524 !important;
+  box-shadow: 0 1px 1px #e7e5e4;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
+  padding: 8px 16px;
+
+
+
+  &:hover {
+    border-color: #ed4e6b !important;
+    background-color: #fdecf0 !important;
+
+    &:not(.avatar-custom) {
+      color: #ed4e6b !important;
+    }
+
+
+    .reload-icon path,
+    .down-icon path {
+      stroke: #ed4e6b !important;
+    }
+
+    .export-icon path {
+      fill: #ed4e6b !important;
+    }
+  }
+
+
+}
+
+
+.avatar {
+  width: 30px;
+  height: 30px;
+}
+
+.ant-btn.group-btn {
+  margin-left: 0 !important;
+}
+
+.ant-btn {
+  font-size: 12px;
+}
+
+.ant-btn.group-btn {
+  margin-left: 0 !important;
+}
+
+.ant-btn+.ant-btn {
+  margin-left: 10px !important;
+}
+
+.ant-btn.group-btn {
+  margin-left: 0 !important;
+}
+
+
+// Dropdown
+
+
+
+.user-dropdown-menu {
+  .ant-dropdown-menu-item {
+    padding: 8px;
+  }
+
+  .settings-item,
+  .logout-item {
+    padding: 12px 16px;
+    height: auto;
+    line-height: normal;
+  }
+
+
+}
+
+// Remove animation effects
+
+
+.ant-dropdown-menu-item-active {
+  background-color: transparent !important;
+}
