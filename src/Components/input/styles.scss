@@ -1,0 +1,89 @@
+
+  
+
+.my-input-container {
+    position: relative;
+}
+
+.my-skeleton-input,
+.my-skeleton-textarea {
+    position: absolute;
+    width: 100% !important;
+}
+
+.my-input {
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    color: #1c1917;
+    justify-content: start;
+    padding: 2px 12px !important;
+    font: 400 13px / 2 Inter, sans-serif;
+    border: 1px solid #D6D3D1;
+    height: 36px;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    align-self: stretch;
+    flex: 1;
+    flex-basis: 0%;
+    margin: auto 0;
+}
+
+// Select
+.my-select-container {
+    position: relative;
+}
+
+.my-skeleton-input,
+.my-skeleton-textarea {
+    position: absolute;
+    width: 100% !important;
+}
+
+.my-select {
+    min-width: 50px;
+}
+
+.ant-select {
+    height: 36px;
+}
+
+// DatePicker
+.my-skeleton-input,
+.my-skeleton-textarea {
+    position: absolute;
+    width: 100% !important;
+}
+
+.ant-picker {
+    padding: 2px 12px;
+    gap: 12px;
+    border: 1px solid #D6D3D1;
+    border-radius: 8px !important;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 36px;
+}
+
+.ant-picker .ant-picker-input:first-child {
+    order: 3;
+}
+
+.ant-picker .ant-picker-input:last-child {
+    order: 1;
+}
+
+.my-date-picker .ant-picker-suffix {
+    transition: all .3s ease-in-out;
+}
+
+.ant-picker .ant-picker-suffix {
+    display: flex !important;
+    opacity: 1 !important;
+}
+
+.ant-picker .ant-picker-suffix {
+    order: 4;
+}

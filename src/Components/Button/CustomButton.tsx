@@ -1,23 +1,18 @@
 import classNames from "classnames";
 import { Avatar, Button, Tooltip } from "antd";
-import PlusIcon from "../../Icons/PlusIcon";
-import ExportIcon from "../../Icons/ExportIcon";
-import ReloadIcon from "../../Icons/ReloadIcon";
-import DownIcon from "../../Icons/DownIcon";
-import SearchIcon from "../../Icons/SearchIcon";
-
+import { PlusIcon, ExportIcon, ReloadIcon, DownIcon, SearchIcon, FilterIcon, CancelIcon } from "../icons";
 import "./Button.scss";
 
 interface CustomButtonProps {
   tooltip?: string;
-  iconName?: "plus" | "export" | "reload" | "down" | "search"; // Tên của biểu tượng
-  text: string;
+  iconName?: "plus" | "export" | "reload" | "down" | "search" | "filter" | "cancel"; // Tên của biểu tượng
+  text?: string;
   avatar?: boolean;
   primary?: boolean;
   secondary?: boolean;
   outline?: boolean;
   groupBtn?: boolean;
-  style?: React.CSSProperties;
+  [key: string]: any; 
 }
 // Tên của biểu tượng ứng với tên component
 const icons = {
@@ -26,10 +21,11 @@ const icons = {
   reload: ReloadIcon,
   down: DownIcon,
   search: SearchIcon,
+  filter: FilterIcon,
+  cancel: CancelIcon,
 };
 
 const CustomButton: React.FC<CustomButtonProps> = ({
-  style,
   tooltip,
   iconName,
   text,
@@ -38,6 +34,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   secondary = false,
   outline = false,
   groupBtn = false,
+  ...props
 }) => {
   // Class name 
   const buttonClass = classNames("my-button ant-btn", {
@@ -54,9 +51,10 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   return (
     <Tooltip title={tooltip}>
       {avatar ? (
-        <Button className={buttonClass} style={style}>
+        <Button className={buttonClass} {...props} >
           <Avatar className="avatar" />
-          <span>{text}</span>
+          {text && <span>{text}</span>}
+
           {IconComponent && (
             <span className="ant-btn-icon">
               <IconComponent />
@@ -64,13 +62,13 @@ const CustomButton: React.FC<CustomButtonProps> = ({
           )}
         </Button>
       ) : (
-        <Button className={buttonClass} style={style}>
+        <Button className={buttonClass} {...props} >
           {IconComponent && (
             <span className="ant-btn-icon">
               <IconComponent />
             </span>
           )}
-          <span>{text}</span>
+          {text && <span>{text}</span>}
         </Button>
       )}
     </Tooltip>

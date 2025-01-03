@@ -1,19 +1,20 @@
-import "./App.css";
+import "./App.scss";
 import { Layout } from "antd";
-import AppHeader from "./Layouts/Header";
-import AppSider from "./Layouts/SideBar";
 import { Content } from "antd/es/layout/layout";
-import TableView from "./TableView";
+import { AppHeader, AppSider } from "./components/core";
+import { MyRouter, PageTitleProvider } from "./routes";
 
 function App() {
   return (
     <Layout className="h-screen">
       <AppSider />
       <Layout>
-        <AppHeader title="DashBoard" />
+        <PageTitleProvider>
+          {(title) => <AppHeader title={title} />}
+        </PageTitleProvider>
         <Content>
-          <div className="mx-5 px-5">
-            <TableView />
+          <div className="shared-layout-container">
+            <MyRouter />
           </div>
         </Content>
       </Layout>
