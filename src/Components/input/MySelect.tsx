@@ -3,18 +3,19 @@ import { Select } from "antd";
 import "./styles.scss";
 import { DownIcon } from "../icons";
 import { MySelectProps } from "../../interfaces/search/AdvancedSearch";
+
 const { Option } = Select;
 
 const MySelect: React.FC<MySelectProps> = ({
     options = [],
+    value,
     ...props
 }) => {
-   
-
     return (
         <div className="my-select-container" style={{ position: "relative" }}>
             <Select
                 {...props}
+                value={value}
                 allowClear
                 className="my-select"
                 placeholder="Select"
@@ -23,14 +24,14 @@ const MySelect: React.FC<MySelectProps> = ({
                     opacity: 1,
                     transition: "opacity 0.3s ease-in-out",
                 }}
-                suffixIcon={<DownIcon width="8px" height="8px" />}
+
+                suffixIcon={<DownIcon  width="9px" height="9px" />}
             >
                 {options.map((option) => (
                     <Option key={option.value} value={option.value}>
                         {option.label}
                     </Option>
                 ))}
-
             </Select>
         </div>
     );

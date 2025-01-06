@@ -1,6 +1,3 @@
-
-  
-
 .my-input-container {
     position: relative;
 }
@@ -86,4 +83,17 @@
 
 .ant-picker .ant-picker-suffix {
     order: 4;
+}
+
+// icon
+.my-datepicker-container .my-input .calendar-icon {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.my-datepicker-container .my-input:hover .calendar-icon,
+.my-select-container .my-select:hover {
+    visibility: hidden;
+    opacity: 0;
 }

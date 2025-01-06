@@ -1,7 +1,6 @@
 import { Form } from 'antd';
 import React from 'react';
 import { MyDatePicker, MyInput } from '../input';
-import { EditOutlined } from '@ant-design/icons';
 import { AdvancedFormProps } from '../../interfaces/search/AdvancedSearch';
 import { API_COUNTRY_ENDPOINTS } from '../../api/apiConfig';
 import LocationSelect from './LocationSelect';
@@ -50,11 +49,11 @@ const AdvancedForm: React.FC<AdvancedFormProps> = ({ form, ...props }) => {
             </Form.Item>
 
             <Form.Item label="Full Address" name="fullAddress">
-                <MyInput suffix={<EditOutlined />} />
+                <MyInput showSuffixIcon={true} />
             </Form.Item>
 
             <Form.Item label="Created By" name="createdBy">
-                <MyInput suffix={<EditOutlined />} />
+                <MyInput showSuffixIcon={true} />
             </Form.Item>
 
             <Form.Item label="Created At" name="createdDate">
@@ -62,7 +61,7 @@ const AdvancedForm: React.FC<AdvancedFormProps> = ({ form, ...props }) => {
             </Form.Item>
 
             <Form.Item label="Modified By" name="modifiedBy">
-                <MyInput suffix={<EditOutlined />} />
+                <MyInput showSuffixIcon={true} />
             </Form.Item>
 
             <Form.Item label="Modified At" name="modifiedDate">

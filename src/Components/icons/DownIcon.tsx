@@ -6,9 +6,10 @@ interface DownIconProps {
   color?: string;
 }
 
-const DownIcon: React.FC<DownIconProps> = ({ width = "12px", height = "12px", color = "#292524" }) => {
+const DownIcon: React.FC<DownIconProps> = ({ width = "12px", height = "12px", color = "#292524", ...props }) => {
   return (
     <svg
+      {...props}
       className="down-icon"
       width={width}
       height={height}
