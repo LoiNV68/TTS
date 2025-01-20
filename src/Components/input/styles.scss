@@ -1,0 +1,170 @@
+.my-input-container {
+    position: relative;
+}
+
+.my-skeleton-input,
+.my-skeleton-textarea {
+    position: absolute;
+    width: 100% !important;
+}
+
+.my-input {
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    color: #1c1917;
+    justify-content: start;
+    padding: 2px 12px !important;
+    font: 400 13px / 2 Inter, sans-serif;
+    border: 1px solid #D6D3D1;
+    height: 36px;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    align-self: stretch;
+    flex: 1;
+    flex-basis: 0%;
+    margin: auto 0;
+}
+
+// Select
+.my-select-container {
+    position: relative;
+}
+
+.my-skeleton-input,
+.my-skeleton-textarea {
+    position: absolute;
+    width: 100% !important;
+}
+
+.my-select {
+    min-width: 50px;
+}
+
+.ant-select {
+    height: 36px;
+}
+
+.ant-select-dropdown {
+    --arrow-x: 91.80000305175781px;
+    --arrow-y: -2px;
+    inset: 230px auto auto 509px;
+    box-sizing: border-box;
+    z-index: 1150;
+    width: 183.6px;
+}
+
+// DatePicker
+.my-skeleton-input,
+.my-skeleton-textarea {
+    position: absolute;
+    width: 100% !important;
+}
+
+.ant-picker {
+    padding: 2px 12px;
+    gap: 12px;
+    border: 1px solid #D6D3D1;
+    border-radius: 8px !important;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 36px;
+}
+
+.ant-picker .ant-picker-input:first-child {
+    order: 3;
+}
+
+.ant-picker .ant-picker-input:last-child {
+    order: 1;
+}
+
+.my-date-picker .ant-picker-suffix {
+    transition: all .3s ease-in-out;
+}
+
+.ant-picker .ant-picker-suffix {
+    display: flex !important;
+    opacity: 1 !important;
+}
+
+.ant-picker .ant-picker-suffix {
+    order: 4;
+}
+
+// icon
+.my-datepicker-container .my-input .calendar-icon {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.my-datepicker-container .my-input:hover .calendar-icon,
+.my-select-container .my-select .ant-select-arrow:hover {
+    visibility: hidden;
+    opacity: 0;
+}
+
+// ghi đè class atd
+.ant-input-outlined:not(.ant-input-disabled):hover,
+.ant-select:not(.ant-select-disabled) .ant-select-selector:hover,
+.ant-picker:hover {
+    border-color: #e65747 !important;
+    background-color: #ffffff !important;
+}
+
+.ant-input-outlined:focus,
+.ant-input-outlined:focus-within,
+.ant-select-focused .ant-select-selector,
+.ant-picker-focused {
+    border-color: #d92d20 !important;
+    box-shadow: 0 0 0 2px rgba(255, 55, 5, 0.06) !important;
+    outline: 0 !important;
+    background-color: #ffffff !important;
+}
+
+.ant-radio-checked .ant-radio-inner {
+    border-color: #e65747 !important;
+    background-color: #e65747 !important;
+}
+
+.ant-radio-wrapper:hover .ant-radio-inner {
+    border-color: #e65747 !important;
+}
+
+.ant-input-disabled {
+    color: #00000040 !important;
+    background: #EEEDEC !important;
+}
+
+// upload
+.ant-upload.ant-upload-select {
+    width: 100% !important;
+    height: 120px !important;
+}
+
+
+
+.custom-upload .ant-upload {
+    background: transparent;
+    border: 1px dashed #d9d9d9;
+    transition: border-color 0.3s;
+}
+
+.ant-upload-wrapper.ant-upload-picture-card-wrapper .ant-upload.ant-upload-select:not(.ant-upload-disabled):hover,
+.ant-upload-wrapper.ant-upload-picture-circle-wrapper .ant-upload.ant-upload-select:not(.ant-upload-disabled):hover,
+.custom-upload .ant-upload:hover {
+    border-color: #ED4E6B;
+
+}
+
+//textarea
+.my-textarea textarea {
+    height: 100px;
+    overflow-y: auto !important;
+    resize: none;
+}
+
+// radio

@@ -1,8 +1,8 @@
 import React from "react";
 import { Dropdown, Avatar, MenuProps } from "antd";
 import { SettingOutlined, LogoutOutlined } from "@ant-design/icons";
-import CustomButton from "./CustomButton";
 import "./Button.scss";
+import CustomButton from "./CustomButton";
 
 interface UserDropdownProps {
   username: string;
@@ -69,7 +69,7 @@ export const UserDropdown: React.FC<UserDropdownProps> = ({
     <Dropdown
       menu={{ items: menuItems }}
       trigger={["click"]}
-      placement="bottomRight" 
+      placement="bottomRight"
       destroyPopupOnHide
       getPopupContainer={trigger => trigger.parentElement!}
     >
@@ -91,5 +91,3 @@ export const UserDropdown: React.FC<UserDropdownProps> = ({
     </Dropdown>
   );
 };
-
-

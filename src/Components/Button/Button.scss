@@ -62,7 +62,9 @@
   line-height: 20px !important;
   padding: 8px 16px;
 
-
+  .plus-icon path {
+    stroke: #292524 !important;
+  }
 
   &:hover {
     border-color: #ed4e6b !important;
@@ -74,11 +76,14 @@
 
 
     .reload-icon path,
-    .down-icon path {
+    .down-icon path,
+    .cancel-icon path,
+    .plus-icon path {
       stroke: #ed4e6b !important;
     }
 
-    .export-icon path {
+    .export-icon path,
+    .filter-icon path {
       fill: #ed4e6b !important;
     }
   }

@@ -1,0 +1,91 @@
+.my-card-content {
+    background: #F5F5F4;
+    border-radius: 8px;
+    padding: 12px 12px 12px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+// action
+.filter-action {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+}
+
+.h-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+
+
+
+.ant-row {
+    margin: 4px 0;
+    row-gap: 2px !important;
+    align-items: baseline !important;
+}
+
+.ant-btn-link {
+    color: #d92d20;
+}
+
+.ant-btn-link:not(:disabled):not(.ant-btn-disabled):hover {
+    color: #f28372;
+    background: transparent;
+}
+
+// Drawer
+.ant-drawer-content {
+    border-radius: 12px;
+    font-family: Inter;
+}
+
+.ant-drawer-header {
+    background-color: #eeedec;
+    width: 368px !important;
+    height: 56px !important;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Inter;
+    line-height: 21.6px;
+    color: #1c1917;
+    justify-content: flex-end !important;
+}
+
+.ant-drawer-content-wrapper {
+    box-shadow: none !important;
+    width: 400px;
+    padding: 16px;
+}
+
+.drawer-header {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+
+.drawer-header span {
+    margin-right: 4px;
+}
+
+.close-icon {
+    margin-right: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #fff !important;
+    color: #354052 !important;
+    border-radius: 100px !important;
+}

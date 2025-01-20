@@ -1,0 +1,114 @@
+.content-table {
+    width: 100%;
+}
+
+
+
+// Table
+.content-table .ant-table-thead>tr>th {
+    background-color: #e7e5e4 !important;
+    color: #000000e0 !important;
+}
+
+.content-table .ant-table-thead>tr>th:first-child {
+    border-top-left-radius: 0 !important;
+}
+
+.ant-table-wrapper .ant-table.ant-table-middle {
+    background-color: transparent !important;
+}
+
+.content-table .ant-table-container {
+    border: none !important;
+}
+
+.content-table .ant-table-wrapper .ant-table .ant-table-header {
+    border-radius: 0 !important;
+}
+
+
+.content-table table {
+    border-color: #d6d3d1 !important;
+    max-height: 100%;
+}
+
+.table-action-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eeedec;
+    border-radius: 4px;
+    padding: 4px;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background-color .3s ease, color .3s ease;
+    border: 1px solid transparent;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+// Content Footer
+.content-footer {
+    flex-shrink: 0;
+    height: 60px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: 1px solid #D6D3D1;
+    box-shadow: 0 -2px 4px #0000000f;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+}
+
+.content-footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 28px;
+}
+
+.content-footer-note {
+    display: flex;
+    align-items: center;
+}
+
+.content-footer-container .ant-pagination {
+    height: 100%;
+    z-index: 5;
+}
+
+.content-footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 28px;
+}
+
+  
+
+.table-container {
+    overflow: hidden;
+}
+
+// pagination
+
+.ant-pagination .ant-pagination-item-active a {
+    color: #d92d20;
+}
+
+.ant-pagination .ant-pagination-item-active a:hover {
+    color: #d92d20;
+}
+
+.content-footer-container .ant-pagination-item-active {
+    border: 1px solid #ED4E6B !important;
+}
