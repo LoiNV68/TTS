@@ -1,4 +1,4 @@
-.my-card-conent {
+.my-card-content {
     background: #F5F5F4;
     border-radius: 8px;
     padding: 12px 12px 12px 16px;
@@ -22,23 +22,7 @@
     height: 30px;
 }
 
-// ghi đè class atd
-.ant-input-outlined:hover,
-.ant-select:not(.ant-select-disabled) .ant-select-selector:hover,
-.ant-picker:hover {
-    border-color: #e65747 !important;
-    background-color: #ffffff !important;
-}
 
-.ant-input-outlined:focus,
-.ant-input-outlined:focus-within,
-.ant-select-focused .ant-select-selector,
-.ant-picker-focused {
-    border-color: #d92d20 !important;
-    box-shadow: 0 0 0 2px rgba(255, 55, 5, 0.06) !important;
-    outline: 0 !important;
-    background-color: #ffffff !important;
-}
 
 .ant-row {
     margin: 4px 0;

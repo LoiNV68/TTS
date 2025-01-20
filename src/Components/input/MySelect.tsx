@@ -3,19 +3,29 @@ import { Select } from "antd";
 import "./styles.scss";
 import { DownIcon } from "../icons";
 import { MySelectProps } from "../../interfaces/search/AdvancedSearch";
+import { MyFormItem } from "../form";
 
 const { Option } = Select;
 
+
 const MySelect: React.FC<MySelectProps> = ({
+    formItem,
     options = [],
-    value,
     ...props
 }) => {
+    const { name, label, required = false, form, rules, ...rest } = formItem;
+
     return (
-        <div className="my-select-container" style={{ position: "relative" }}>
+        <MyFormItem
+            name={name}
+            label={label}
+            required={required}
+            rules={rules}
+            form={form}
+            {...rest}
+        >
             <Select
                 {...props}
-                value={value}
                 allowClear
                 className="my-select"
                 placeholder="Select"
@@ -24,8 +34,7 @@ const MySelect: React.FC<MySelectProps> = ({
                     opacity: 1,
                     transition: "opacity 0.3s ease-in-out",
                 }}
-
-                suffixIcon={<DownIcon  width="9px" height="9px" />}
+                suffixIcon={<DownIcon width="9px" height="9px" />}
             >
                 {options.map((option) => (
                     <Option key={option.value} value={option.value}>
@@ -33,7 +42,7 @@ const MySelect: React.FC<MySelectProps> = ({
                     </Option>
                 ))}
             </Select>
-        </div>
+        </MyFormItem>
     );
 };
 

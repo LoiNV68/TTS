@@ -4,7 +4,7 @@ import type { ColumnsType } from 'antd/es/table';
 import { DeleteIcon, EditIcon } from '../../icons';
 import { DataType, TableCustomProps } from '../../../interfaces/tables/TableType';
 
-const TableCustom: React.FC<TableCustomProps> = ({ data }) => {
+const TableCustom: React.FC<TableCustomProps> = ({ data, handleEdit, handleDelete }) => {
     const columns: ColumnsType<DataType> = [
         {
             title: 'Code',
@@ -71,14 +71,14 @@ const TableCustom: React.FC<TableCustomProps> = ({ data }) => {
             key: 'actions',
             fixed: 'right',
             width: 100,
-            render: () => (
+            render: (_, record) => ( // Thêm `record` ở đây
                 <div className="flex justify-center items-baseline">
-                    <button className="table-action-button">
+                    <button className="table-action-button" onClick={() => handleEdit(record)}>
                         <div className="icon-wrapper">
                             <EditIcon />
                         </div>
                     </button>
-                    <button className="table-action-button">
+                    <button className="table-action-button" onClick={() => handleDelete(record)}>
                         <div className="icon-wrapper">
                             <DeleteIcon />
                         </div>
@@ -90,13 +90,13 @@ const TableCustom: React.FC<TableCustomProps> = ({ data }) => {
 
     return (
         <Table
+            sticky
             columns={columns}
             dataSource={data}
             pagination={false}
-            scroll={{ x: 1400 }}
+            scroll={{ x: "max-content", y: "calc(-10px + 100vh)" }}
             bordered
             size="middle"
-            className="overflow-x-auto"
         />
     );
 };

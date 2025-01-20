@@ -11,8 +11,10 @@ import CancelIcon from "./CancelIcon";
 import EditIcon from "./EditIcon";
 import DeleteIcon from "./DeleteIcon";
 import AdvancedSearch from "./AdvancedSearch";
+import UploadIcon from "./UploadIcon";
+import TrashIcon from "./TrashIcon";
 export {
     BellIcon, DownIcon, ExportIcon, PlusIcon, ReloadIcon, SearchIcon,
     SettingIcon, SidebarIcon, FilterIcon, CancelIcon, EditIcon, DeleteIcon,
-    AdvancedSearch
+    AdvancedSearch, UploadIcon, TrashIcon
 };

@@ -1,4 +1,4 @@
-import moment from 'moment';
+import dayjs from 'dayjs';
 import { message } from 'antd';
 import { ApiDataItem, DataTypeExport } from '../../interfaces/tables/TableType';
 import { exportListToExcel } from '../table/export/ExportListToExcel';
@@ -11,7 +11,7 @@ const formatDataForExport = (data: ApiDataItem[]): Record<string, any>[] => {
         Salutation: "",
         Name: item.fullName,
         Gender: item.gender === "F" ? "Female" : "Male",
-        Birthday: item.birthdate ? moment(item.birthdate).format('DD/MM/YYYY') : '',
+        Birthday: item.birthdate ? dayjs(item.birthdate).format('DD/MM/YYYY') : '',
         Phone: item.phone,
         Email: item.email,
         Country: "",
@@ -24,11 +24,11 @@ const formatDataForExport = (data: ApiDataItem[]): Record<string, any>[] => {
         Type: item.idType,
         'ID No': item.idNo,
         "Issue Place": item.idIssuer,
-        "Issue Date": item.idDate ? moment(item.idDate).format('DD/MM/YYYY') : '',
-        "Expiry Date": item.idExpiryDate ? moment(item.idExpiryDate).format('DD/MM/YYYY') : '',
+        "Issue Date": item.idDate ? dayjs(item.idDate).format('DD/MM/YYYY') : '',
+        "Expiry Date": item.idExpiryDate ? dayjs(item.idExpiryDate).format('DD/MM/YYYY') : '',
         Remark: "",
-        "Created At": item.createdDate ? moment(item.createdDate).format('DD/MM/YYYY') : '',
-        "Modified At": item.modifiedDate ? moment(item.modifiedDate).format('DD/MM/YYYY') : '',
+        "Created At": item.createdDate ? dayjs(item.createdDate).format('DD/MM/YYYY') : '',
+        "Modified At": item.modifiedDate ? dayjs(item.modifiedDate).format('DD/MM/YYYY') : '',
         "Modified By": item.modifiedBy
     }));
 };

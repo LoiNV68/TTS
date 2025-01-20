@@ -9,6 +9,7 @@ export interface ShareLayoutProps {
     };
     type?: "content" | "filter";
     handleExport?: () => void;
+    handleOpenModal?: () => void;
 }
 
 export interface LoadingOverlayProps {

@@ -5,6 +5,8 @@ export interface MyTableProps {
     data: any[];
     pagination?: TablePaginationConfig;
     handlePaginationChange?: (page: number, pageSize: number) => void;
+    handleEdit: (record: DataType) => void;
+    handleDelete: (record: DataType) => void;
 }
 
 export interface DataType {
@@ -12,7 +14,7 @@ export interface DataType {
     code: string;
     name: string;
     gender: string;
-    birthday: string;
+    birthdate: string;
     phone: string;
     email: string;
     fullAddress: string;
@@ -21,6 +23,7 @@ export interface DataType {
     idType?: string;
     idIssuer?: string;
     idDate?: string;
+
     idExpiryDate?: string;
     createdDate?: string;
     modifiedDate?: string;
@@ -46,6 +49,8 @@ export interface ApiDataItem { [key: string]: any; }
 
 export interface TableCustomProps {
     data: DataType[];
+    handleEdit: (record: DataType) => void;
+    handleDelete: (record: DataType) => void;
 }
 
 export interface PaginationCustomProps {

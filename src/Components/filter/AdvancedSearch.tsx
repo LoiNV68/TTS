@@ -1,14 +1,12 @@
 import React, { Fragment } from 'react';
-import { Form, Drawer } from 'antd';
+import { Drawer } from 'antd';
 import DrawerHeader from './DrawerHeader';
 import "./styles.scss";
 import DrawerFooter from './DrawerFooter';
-import AdvancedForm from './AdvancedForm';
+import AdvancedForm from '../form/AdvancedForm';
 import { AdvancedSearchProps } from '../../interfaces/search/AdvancedSearch';
 
-const AdvancedSearch: React.FC<AdvancedSearchProps> = ({ open, onClose, onFinish }) => {
-    const [form] = Form.useForm();
-
+const AdvancedSearch: React.FC<AdvancedSearchProps> = ({ form, open, onClose, onFinish }) => {
     const handleReset = () => {
         form.resetFields();
     };

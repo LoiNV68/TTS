@@ -3,7 +3,7 @@ import "./styles.scss";
 import { CustomButton } from "../../button";
 import { ShareLayoutProps } from "../../../interfaces/layouts/ShareLayout";
 
-const ShareLayout: React.FC<ShareLayoutProps> = ({ children, buttons = {}, showHeader = false, type, handleExport }) => {
+const ShareLayout: React.FC<ShareLayoutProps> = ({ children, buttons = {}, showHeader = false, type, handleExport, handleOpenModal }) => {
     const layoutContent = {
         content: <div className="shared-layout-content">{children}</div>,
         filter: <div className="content-filter">{children}</div>,
@@ -15,7 +15,7 @@ const ShareLayout: React.FC<ShareLayoutProps> = ({ children, buttons = {}, showH
                     <div className="content-header header">
                         <div className="content-header-left">
                             {buttons?.export && <CustomButton text="Export" iconName="export" outline onClick={handleExport} />}
-                            {buttons?.add && <CustomButton text="Add" iconName="plus" outline />}
+                            {buttons?.add && <CustomButton text="Add" iconName="plus" outline onClick={handleOpenModal} />}
                             {buttons?.reload && <CustomButton text="Reload" iconName="reload" outline />}
                             {buttons?.cancel && <CustomButton text="Cancel" iconName="cancel" outline />}
                         </div>

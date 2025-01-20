@@ -4,6 +4,10 @@ const API_COUNTRY = import.meta.env.VITE_API_COUNTRY;
 export const API_BOOKING_ENDPOINTS = {
     guestInfoSearch: `${API_BOOKING}/guest-info/search`,
     booking: `${API_BOOKING}/booking/search`,
+    createGuestInfo: `${API_BOOKING}/guest-info/create`,
+    findGuestInfo: (id: string) => `${API_BOOKING}/guest-info/find/${id}`,
+    updateGuestInfo: `${API_BOOKING}/guest-info/update`,
+    deleteGuestInfo: (id: string) => `${API_BOOKING}/guest-info/delete/${id}`,
 };
 export const API_COUNTRY_ENDPOINTS = {
     countries: () => `${API_COUNTRY}country?limit=-1`,

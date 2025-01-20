@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Form } from 'antd';
+import { Form, FormInstance } from 'antd';
 import { CustomButton, ResetButton } from '../button';
 import './styles.scss';
 import AdvancedSearch from './AdvancedSearch';
 import { DataType } from '../../interfaces/tables/TableType';
-import SearchForm from './SearchForm';
+import SearchForm from '../form/SearchForm';
+import { FormContext } from '../form';
 
 interface FilterProps {
   card?: boolean;
@@ -14,7 +15,6 @@ interface FilterProps {
 const MyFilter: React.FC<FilterProps> = ({ card = false, onSearch }) => {
   const [form] = Form.useForm();
   const [searchFilterAdvanced, setSearchFilterAdvanced] = useState(false);
-
   const handleReset = () => {
     form.resetFields();
   };
@@ -42,8 +42,8 @@ const MyFilter: React.FC<FilterProps> = ({ card = false, onSearch }) => {
     { value: "I", label: "Inactive" },
   ]
   return (
-    <>
-      <SearchForm form={form} onFinish={onFinish} options={defaultOptions}>
+    <FormContext.Provider value={form}>
+      <SearchForm onFinish={onFinish} options={defaultOptions}>
         <div className="filter-action">
           <ResetButton onClick={handleReset} />
           <div className="h-center">
@@ -56,8 +56,8 @@ const MyFilter: React.FC<FilterProps> = ({ card = false, onSearch }) => {
           </div>
         </div>
       </SearchForm>
-      <AdvancedSearch open={searchFilterAdvanced} onClose={() => setSearchFilterAdvanced(false)} onFinish={onFinish}/>
-    </>
+      <AdvancedSearch form={form} open={searchFilterAdvanced} onClose={() => setSearchFilterAdvanced(false)} onFinish={onFinish} />
+    </FormContext.Provider>
   );
 };
 

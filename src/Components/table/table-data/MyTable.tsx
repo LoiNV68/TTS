@@ -7,7 +7,9 @@ import "./styles.scss";
 const MyTable: React.FC<MyTableProps> = ({
     data,
     pagination,
-    handlePaginationChange
+    handlePaginationChange,
+    handleEdit,
+    handleDelete
 }) => {
     const handleChange = (page: number, pageSize: number) => {
         if (handlePaginationChange) {
@@ -17,8 +19,8 @@ const MyTable: React.FC<MyTableProps> = ({
 
     return (
         <div className='content-table'>
-            <TableCustom data={data} />
-            <ContentFooter 
+            <TableCustom data={data} handleEdit={handleEdit} handleDelete={handleDelete} />
+            <ContentFooter
                 pagination={{
                     current: pagination?.current || 1,
                     pageSize: pagination?.pageSize || 15,

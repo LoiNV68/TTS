@@ -1,4 +1,4 @@
-import moment from "moment";
+import dayjs from "dayjs";
 import { ApiDataItem } from "../interfaces/tables/TableType";
 
 const dynamicMappingConfig: { [key: string]: (item: ApiDataItem) => any } = {
@@ -6,7 +6,7 @@ const dynamicMappingConfig: { [key: string]: (item: ApiDataItem) => any } = {
     code: (item) => item.guestNo,
     name: (item) => item.fullName,
     gender: (item) => (item.gender === 'F' ? 'Female' : 'Male'),
-    birthday: (item) => (item.birthdate ? moment(item.birthdate).format('DD/MM/YYYY') : ''),
+    birthdate: (item) => (item.birthdate ? dayjs(item.birthdate).format('DD/MM/YYYY') : ''),
     phone: (item) => item.phone,
     email: (item) => item.email || '',
     fullAddress: (item) => item.fullAddress || '',

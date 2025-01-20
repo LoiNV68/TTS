@@ -1,0 +1,107 @@
+.my-modal .ant-modal-content {
+    padding: 0 !important;
+    border-radius: 12px;
+}
+
+.text-gray {
+    color: #57534e;
+}
+
+.my-modal .ant-modal {
+    width: 880px !important;
+    transform-origin: 64px 333.15px !important;
+}
+
+.ant-modal-body {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+//header
+.my-modal .ant-modal-header {
+    border-radius: 12px 12px var(--none, 0px) var(--none, 0px);
+    border-bottom: 1px solid var(--Colour-Greyscale-300, #D6D3D1);
+    background: var(--Colour-Greyscale-100, #EEEDEC);
+    display: flex;
+    padding: 16px;
+    align-items: flex-end;
+    gap: 12px;
+    align-self: stretch;
+    margin-bottom: 0;
+}
+
+.my-modal .ant-modal-title {
+    color: var(--Colour-Greyscale-900, #1C1917);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+//body
+.my-modal .ant-modal-body {
+    padding: 16px;
+}
+
+.ant-row {
+    margin: 4px 0;
+    row-gap: 2px !important;
+    align-items: baseline !important;
+}
+
+.my-modal .ant-modal-body {
+    padding: 16px;
+}
+
+// card
+.my-card-content {
+    background: #F5F5F4;
+    border-radius: 8px;
+    padding: 12px 12px 12px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.my-card-content-header {
+    margin: 0 !important;
+    color: #57534e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ant-form-item-required,
+.label-txt {
+    color: var(--Colour-Greyscale-900, #1c1917) !important;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.label-start {
+    color: red;
+    margin-left: 2px;
+    margin-bottom: 4px;
+}
+
+
+.ant-form-vertical .ant-form-item:not(.ant-form-item-horizontal) .ant-form-item-label>label {
+    height: 36px;
+}
+
+// footer
+.my-modal .ant-modal-footer {
+    padding: 16px;
+    border-top: 1px solid #D6D3D1;
+    margin-top: 0;
+}
+
+
+
+
+
+.ant-modal-root .ant-modal-wrap {
+    overflow: hidden !important; 
+}

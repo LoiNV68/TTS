@@ -1,2 +1,5 @@
 import searchGuestInfo from "./guestService";
-export {searchGuestInfo};
+import createGuestInfo from "./createGuestInfo ";
+import updateGuestInfo from "./updateGuestInfo";
+import findGuestInfo from "./findGuestInfo";
+export { searchGuestInfo, createGuestInfo, updateGuestInfo, findGuestInfo };
