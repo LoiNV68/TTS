@@ -93,11 +93,12 @@
     height: 28px;
 }
 
-  
+
 
 .table-container {
     overflow: hidden;
 }
+
 
 // pagination
 
@@ -111,4 +112,22 @@
 
 .content-footer-container .ant-pagination-item-active {
     border: 1px solid #ED4E6B !important;
+}
+
+.ant-table-sticky-scroll {
+    display: none !important;
+}
+
+// footer table
+.total-sum {
+    overflow: hidden;
+    color: var(--Colour-Primary-700, #ab112e);
+    text-align: right;
+    text-overflow: ellipsis;
+    float: right;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
 }

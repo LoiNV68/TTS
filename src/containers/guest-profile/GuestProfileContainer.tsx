@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react';
 import { message } from 'antd';
 import { TablePaginationConfig } from 'antd/es/table';
 import { LoadingOverlay, ShareLayout } from '../../components/core';
-import MyFilter from '../../components/filter/MyFilter';
+import { MyFilter } from '../../components/filter';
 import { ApiDataItem, DataType, SearchFilter } from '../../interfaces/tables/TableType';
 import { MyTable } from '../../components/table';
 import { findGuestInfo, searchGuestInfo } from '../../services';
@@ -12,6 +12,7 @@ import exportToExcel from '../../components/utils/exportUtils';
 import GuestModal from './GuestInfoForm';
 import DeleteModal from './DeleteModal';
 import deleteGuestInfo from '../../services/deleteGuestInfo';
+import { columnsGuestProfile } from '../../components/columns';
 
 const GuestProfileContainer: React.FC = () => {
     const [data, setData] = useState<DataType[]>([]);
@@ -32,7 +33,7 @@ const GuestProfileContainer: React.FC = () => {
     const openDeleteModal = (record: DataType) => {
         setIsDeleteModalOpen(true);
         setDeletingRecord(record);
-        console.log("key",record.key);
+        console.log("key", record.key);
     }
 
 
@@ -114,7 +115,7 @@ const GuestProfileContainer: React.FC = () => {
                 <MyFilter onSearch={handleSearch} />
             </ShareLayout>
             <ShareLayout
-                showHeader={!loading}
+                leftHeader={!loading}
                 buttons={{ export: true, add: true }}
                 type={loading ? undefined : "content"}
                 handleExport={() => exportToExcel(dataExport)}
@@ -122,11 +123,10 @@ const GuestProfileContainer: React.FC = () => {
             >
                 <LoadingOverlay visible={loading} />
                 <MyTable
+                    columns={columnsGuestProfile(handleEdit, openDeleteModal)}
                     data={data}
                     pagination={pagination}
                     handlePaginationChange={handlePaginationChange}
-                    handleEdit={handleEdit}
-                    handleDelete={openDeleteModal}
                 />
                 <GuestModal
                     open={isModalOpen}

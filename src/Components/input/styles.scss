@@ -110,7 +110,8 @@
 // ghi đè class atd
 .ant-input-outlined:not(.ant-input-disabled):hover,
 .ant-select:not(.ant-select-disabled) .ant-select-selector:hover,
-.ant-picker:hover {
+.ant-picker:hover,
+.ant-input-number-outlined:hover {
     border-color: #e65747 !important;
     background-color: #ffffff !important;
 }
@@ -118,7 +119,9 @@
 .ant-input-outlined:focus,
 .ant-input-outlined:focus-within,
 .ant-select-focused .ant-select-selector,
-.ant-picker-focused {
+.ant-picker-focused,
+.ant-input-number-outlined:focus,
+.ant-input-number-outlined:focus-within {
     border-color: #d92d20 !important;
     box-shadow: 0 0 0 2px rgba(255, 55, 5, 0.06) !important;
     outline: 0 !important;
@@ -167,4 +170,56 @@
     resize: none;
 }
 
-// radio
+// range picker
+.ant-picker-outlined.ant-picker-status-error:not(.ant-picker-disabled) {
+    background: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ff4d4f;
+}
+
+.ant-picker {
+    padding: 2px 12px;
+    gap: 12px;
+    border: 1px solid #D6D3D1;
+    border-radius: 8px !important;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 36px;
+}
+
+.ant-picker:not(.ant-picker-disabled):not([disabled]).ant-picker-status-error .ant-picker-active-bar {
+    background: #ff4d4f;
+}
+
+.ant-picker-range .ant-picker-active-bar {
+    bottom: -1px;
+    height: 2px;
+    background: #d92d20;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    pointer-events: none;
+}
+
+.ant-picker .ant-picker-range-separator {
+    order: 2;
+    margin: 0 ;
+}
+.range-wrapper {
+    position: relative;
+}
+.count-night {
+    margin-top: 3%;
+    padding: 2px 8px;
+    border-radius: 8px;
+    display: flex;
+    gap: 5px;
+    background-color: rgb(187, 247, 208);
+    color: rgb(22, 101, 52);
+    position: absolute;
+    top: 40px;
+    right: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 13px;
+}

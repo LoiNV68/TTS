@@ -1,0 +1,205 @@
+.page-wrapper .page-content {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+}
+
+
+.ant-row {
+    margin: 4px 0;
+    row-gap: 2px !important;
+    align-items: baseline !important;
+}
+
+
+// Detail Information
+.page-wrapper .right-column .charge-container {
+    margin: 0 auto;
+    border: 1px solid #15803d;
+    border-radius: 10px;
+    background-color: #f0fdf4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    color: #57534e;
+    font-weight: 500;
+}
+
+.page-wrapper .right-column .charge-container .charge-item,
+.page-wrapper .right-column .booking-container .charge-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.charge-item {
+    flex-wrap: wrap;
+}
+
+.page-wrapper .right-column .charge-container .charge-label,
+.page-wrapper .right-column .booking-container .charge-label {
+    margin: 0;
+    color: #57534e;
+    font-weight: 400;
+}
+
+.page-wrapper .right-column .charge-container p,
+.page-wrapper .right-column .booking-container p {
+    margin: 0;
+}
+
+.page-wrapper .right-column .charge-container .charge-item span,
+.page-wrapper .right-column .booking-container .charge-item span {
+    color: #1c1917;
+    font-weight: 500;
+}
+
+.page-wrapper .right-column .charge-container .total {
+    border-top: 1px solid #d6d3d1;
+    padding-top: 10px;
+    color: #57534e;
+    font-weight: 500;
+}
+
+.charge-container .charge-label-price {
+    font-weight: 500;
+}
+
+.page-wrapper .right-column .charge-container .total span {
+    color: #e3173c;
+    font-weight: 500;
+}
+
+.promotion-voucher {
+    margin-top: 16px;
+    min-height: 204px;
+}
+
+.promotion-voucher .promotion,
+.promotion-voucher .voucher {
+    padding: 10px;
+    border: 1px solid #d6d3d1;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.promotion-voucher .promotion {
+    margin-bottom: 10px;
+}
+
+.promotion-voucher .promotion .title,
+.promotion-voucher .voucher .title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.promotion-voucher .promotion .container,
+.promotion-voucher .voucher .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #e7e5e4;
+    padding-top: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #000;
+    font-weight: 500;
+}
+
+.promotion-voucher .promotion .title p,
+.promotion-voucher .voucher .title p {
+    margin: 0;
+    color: #a8a29e;
+    font-weight: 400;
+}
+
+.promotion-voucher .promotion .title .btn,
+.promotion-voucher .voucher .title .btn {
+    color: #16a34a;
+}
+
+.btn {
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.page-wrapper .right-column .remark-container h2 {
+    font-weight: 500;
+    color: #1c1917;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+// Room Information
+.room-wrapper {
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.room-result {
+    overflow-y: auto;
+    max-height: 260px;
+    margin-top: 10px;
+    overflow-x: hidden;
+    flex-grow: 1;
+}
+
+.room-search-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.room-search-list .ant-form-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 36px;
+    align-items: unset !important;
+}
+
+.no-data-found.show {
+    opacity: 1;
+}
+
+.no-data-found {
+    transition: opacity .3s ease;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.no-data-found .no-data-txt {
+    color: #1c1917;
+    font-weight: 500;
+}
+
+// Rate Information
+.change-rate {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.change-rate span {
+    color: #292524;
+    font-weight: 500;
+}

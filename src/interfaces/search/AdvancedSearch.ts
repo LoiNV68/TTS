@@ -5,7 +5,7 @@ export interface AdvancedSearchProps {
     form: FormInstance;
     open: boolean;
     onClose: () => void;
-    onFinish: (values: DataType) => void
+    children: React.ReactNode
 }
 
 export interface LocationOption {

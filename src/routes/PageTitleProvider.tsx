@@ -10,6 +10,7 @@ const PageTitleProvider = ({ children }: { children: (title: string) => JSX.Elem
         "/room-availability": "Room Availability",
         "/my-allotment": "My Allotment",
         "/booking": "Booking",
+        "/booking/new-individual": "New Individual",
         "/user-management": "User Management",
         "/guest-profile": "Guest Profile",
     };

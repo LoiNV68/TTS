@@ -1,12 +1,13 @@
-import { TablePaginationConfig } from "antd";
+import { TablePaginationConfig, TableProps } from "antd";
+import { ColumnsType } from "antd/es/table";
 
 
-export interface MyTableProps {
-    data: any[];
+export interface MyTableProps<T extends Record<string, any> = any> extends TableProps<T> {
+    data: T[];
+    columns: ColumnsType<T>;
     pagination?: TablePaginationConfig;
+    ShowFooter?: boolean;
     handlePaginationChange?: (page: number, pageSize: number) => void;
-    handleEdit: (record: DataType) => void;
-    handleDelete: (record: DataType) => void;
 }
 
 export interface DataType {
@@ -47,10 +48,9 @@ export interface ApiResponse<T = any> {
 
 export interface ApiDataItem { [key: string]: any; }
 
-export interface TableCustomProps {
-    data: DataType[];
-    handleEdit: (record: DataType) => void;
-    handleDelete: (record: DataType) => void;
+export interface TableCustomProps<T = any> extends TableProps<T> {
+    data: T[];
+    columns: ColumnsType<T>;
 }
 
 export interface PaginationCustomProps {

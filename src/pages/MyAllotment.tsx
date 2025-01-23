@@ -1,8 +1,8 @@
 import React from 'react'
-
+import { MyAllotmentContainer } from '../containers'
 const MyAllotment = () => {
   return (
-    <div>MyAllotment</div>
+    <MyAllotmentContainer />
   )
 }
 

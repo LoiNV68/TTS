@@ -1,7 +1,7 @@
 import { Col, Row } from 'antd';
 import React, { useState } from 'react';
 import { MyDatePicker, MyInput, MyRadio, MySelect, Required } from '../../components/input';
-import MyCard from './MyCard';
+import { MyCardContent } from '../../components/core';
 
 interface PersonInformation {
     error?: boolean;
@@ -24,33 +24,33 @@ const PersonInformation: React.FC<PersonInformation> = ({ error }) => {
     ];
 
     return (
-        <MyCard header="Personal Information">
+        <MyCardContent header="Personal Information">
             <Row gutter={[16, 16]}>
                 <Col xs={24} sm={12} md={8}>
-                    <MySelect 
+                    <MySelect
                         formItem={{
                             name: "salutation",
                             label: "Salutation"
-                        }} 
-                        options={optionSelect} 
+                        }}
+                        options={optionSelect}
                     />
                 </Col>
 
                 <Col xs={24} sm={12} md={16}>
-                    <MyInput 
+                    <MyInput
                         formItem={{
                             label: "Guest Name",
                             name: "fullName",
                             required: true,
                             colon: false
-                        }} 
+                        }}
                     />
                 </Col>
             </Row>
 
             <Row gutter={[16, 16]}>
                 <Col xs={24}>
-                    <MyRadio 
+                    <MyRadio
                         formItem={{
                             label: "Select Gender",
                             name: "gender",
@@ -63,37 +63,37 @@ const PersonInformation: React.FC<PersonInformation> = ({ error }) => {
 
             <Row gutter={[16, 16]}>
                 <Col xs={24} sm={24} md={24}>
-                    <MyDatePicker 
+                    <MyDatePicker
                         formItem={{
                             label: "Birthday",
                             name: "birthdate"
-                        }} 
+                        }}
                     />
                 </Col>
             </Row>
 
             <Row gutter={[16, 16]}>
                 <Col xs={12} sm={12}>
-                    <MyInput 
+                    <MyInput
                         formItem={{
                             label: "Phone",
                             name: "phone",
                             isEnableBlur: false
-                        }} 
+                        }}
                     />
                     <Required error={error} />
                 </Col>
 
                 <Col xs={12} sm={12}>
-                    <MyInput 
+                    <MyInput
                         formItem={{
                             label: "Email",
                             name: "email",
-                        }} 
+                        }}
                     />
                 </Col>
             </Row>
-        </MyCard>
+        </MyCardContent>
     );
 };
 

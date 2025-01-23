@@ -1,7 +1,7 @@
 import React from 'react'
-import MyCard from './MyCard'
 import { Col, FormInstance, Row } from 'antd'
 import { FileUpload, MyDatePicker, MyInput, MySelect, Required } from '../../components/input'
+import { MyCardContent } from '../../components/core'
 
 interface IProps {
     form?: FormInstance
@@ -22,7 +22,7 @@ const DocumentInformation: React.FC<IProps> = ({ error = false, hasIdNo }) => {
 
     return (
 
-        <MyCard header='Document information'>
+        <MyCardContent header='Document information'>
             <Row gutter={[16, 16]}>
 
                 <Col xs={12} sm={12} md={12}>
@@ -87,7 +87,7 @@ const DocumentInformation: React.FC<IProps> = ({ error = false, hasIdNo }) => {
                     </Row>
                 </Col>
             </Row>
-        </MyCard>
+        </MyCardContent>
     )
 }
 

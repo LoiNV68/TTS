@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import MyCard from './MyCard'
 import { Col, FormInstance, Row } from 'antd'
 import "./styles.scss"
 import LocationForm from '../../components/form/LocationForm'
 import { MyInput } from '../../components/input'
+import { MyCardContent } from '../../components/core'
 
 interface AddressInformationProps {
     form: FormInstance
@@ -14,7 +14,7 @@ const AddressInformation: React.FC<AddressInformationProps> = ({ form }) => {
         setFullAddress(e.target.value);
     };
     return (
-        <MyCard header='address information'>
+        <MyCardContent header='address information'>
             <LocationForm form={form}>
                 {(items) => (
                     <>
@@ -45,7 +45,7 @@ const AddressInformation: React.FC<AddressInformationProps> = ({ form }) => {
                     }} value={fullAddress} disabled />
                 </Col>
             </Row>
-        </MyCard>
+        </MyCardContent>
     )
 }
 

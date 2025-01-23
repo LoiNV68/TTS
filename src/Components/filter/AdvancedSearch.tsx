@@ -1,31 +1,28 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Drawer } from 'antd';
 import DrawerHeader from './DrawerHeader';
 import "./styles.scss";
 import DrawerFooter from './DrawerFooter';
-import AdvancedForm from '../form/AdvancedForm';
 import { AdvancedSearchProps } from '../../interfaces/search/AdvancedSearch';
 
-const AdvancedSearch: React.FC<AdvancedSearchProps> = ({ form, open, onClose, onFinish }) => {
+const AdvancedSearch: React.FC<AdvancedSearchProps> = ({ form, open, onClose, children }) => {
     const handleReset = () => {
         form.resetFields();
     };
 
     return (
-        <Fragment>
-            <Drawer
-                width={400}
-                title={<DrawerHeader onClose={onClose} />}
-                open={open}
-                onClose={onClose}
-                closeIcon={false}
-                footer={
-                    <DrawerFooter form={form} handleReset={handleReset} onClose={onClose} />
-                }
-            >
-                <AdvancedForm form={form} onFinish={onFinish} />
-            </Drawer>
-        </Fragment>
+        <Drawer
+            width={400}
+            title={<DrawerHeader onClose={onClose} />}
+            open={open}
+            onClose={onClose}
+            closeIcon={false}
+            footer={
+                <DrawerFooter form={form} handleReset={handleReset} onClose={onClose} />
+            }
+        >
+            {children}
+        </Drawer>
     );
 };
 

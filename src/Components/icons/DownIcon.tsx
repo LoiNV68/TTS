@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface DownIconProps {
+interface DownIconProps{
   width?: string;
   height?: string;
   color?: string;

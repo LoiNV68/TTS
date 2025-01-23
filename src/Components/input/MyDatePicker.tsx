@@ -60,7 +60,6 @@ const MyDatePicker: React.FC<MyDatePickerProps> = ({
                 required={required}
                 rules={rules}
                 form={form}
-                // initialValue={dayjs('2025-01-01', 'YYYY-MM-DD')}
                 {...rest}
             >
                 <DatePicker

@@ -1,5 +1,5 @@
-import {Routes, Route } from "react-router-dom";
-import { Booking, Dashboard, GuestProfile, MyAllotment, RoomAvailability, UserManagement } from "../pages";
+import { Routes, Route } from "react-router-dom";
+import { Booking, Dashboard, GuestProfile, MyAllotment, NewIndividaul, RoomAvailability, UserManagement } from "../pages";
 
 const MyRouter = () => {
     return (
@@ -8,6 +8,7 @@ const MyRouter = () => {
             <Route path="/room-availability" element={<RoomAvailability />} />
             <Route path="/my-allotment" element={<MyAllotment />} />
             <Route path="/booking" element={<Booking />} />
+            <Route path="/booking/new-individual" element={<NewIndividaul />} />
             <Route path="/user-management" element={<UserManagement />} />
             <Route path="/guest-profile" element={<GuestProfile />} />
             <Route path="*" element={<h1>404 - Not Found</h1>} />

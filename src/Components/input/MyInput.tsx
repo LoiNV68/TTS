@@ -1,37 +1,47 @@
 import React from "react";
 import { FormInstance, FormItemProps, Input, InputProps } from "antd";
-import { EditOutlined } from '@ant-design/icons';
+import { EditOutlined } from "@ant-design/icons";
 import "./styles.scss";
 import { MyFormItem } from "../form";
 
 interface MyInputProps extends InputProps {
-    showSuffixIcon?: boolean; // Thêm tùy chọn showSuffixIcon
-    formItem: IProps
+    showSuffixIcon?: boolean; // Hiển thị icon mặc định nếu không có giá trị
+    suffix?: React.ReactNode; // Cho phép truyền suffix từ ngoài vào
+    formItem: IProps;
 }
+
 interface IProps extends FormItemProps {
     name: string;
-    label: string;
+    label?: string;
     required?: boolean;
     form?: FormInstance;
     rules?: any[];
     isShowLabel?: boolean;
     isEnableBlur?: boolean;
 }
-const MyInput: React.FC<MyInputProps> = ({ value, showSuffixIcon, formItem, ...props }) => {
+
+const MyInput: React.FC<MyInputProps> = ({
+    value,
+    showSuffixIcon,
+    suffix,
+    formItem,
+    ...props
+}) => {
     const {
         name,
         label,
         required = false,
         form,
         rules,
-        isShowLabel,
+        isShowLabel = true, // Mặc định hiển thị label
         isEnableBlur,
         ...rest
     } = formItem;
+
     return (
         <MyFormItem
             name={name}
-            label={label}
+            label={isShowLabel ? label : undefined} // Nếu isShowLabel = false, bỏ label
             required={required}
             rules={rules}
             form={form}
@@ -42,9 +52,9 @@ const MyInput: React.FC<MyInputProps> = ({ value, showSuffixIcon, formItem, ...p
             <Input
                 {...props}
                 value={value}
-                placeholder="Enter"
+                placeholder={props.placeholder ? props.placeholder : "Enter"}
                 allowClear
-                suffix={showSuffixIcon && !value ? <EditOutlined /> : null}
+                suffix={suffix || (showSuffixIcon && !value ? <EditOutlined /> : null)}
                 className="my-input"
                 style={{
                     opacity: 1,
@@ -54,5 +64,6 @@ const MyInput: React.FC<MyInputProps> = ({ value, showSuffixIcon, formItem, ...p
         </MyFormItem>
     );
 };
+
 
 export default MyInput;
