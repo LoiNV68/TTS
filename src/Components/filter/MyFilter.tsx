@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Form, FormInstance } from 'antd';
 import { CustomButton, ResetButton } from '../button';
 import './styles.scss';
-import AdvancedSearch from './AdvancedSearch';
 import { DataType } from '../../interfaces/tables/TableType';
 import SearchForm from '../form/SearchForm';
-import { FormContext } from '../form';
+import { AdvancedForm, FormContext } from '../form';
+import AdvancedSearch from './AdvancedSearch';
 
 interface FilterProps {
   card?: boolean;
@@ -56,7 +56,9 @@ const MyFilter: React.FC<FilterProps> = ({ card = false, onSearch }) => {
           </div>
         </div>
       </SearchForm>
-      <AdvancedSearch form={form} open={searchFilterAdvanced} onClose={() => setSearchFilterAdvanced(false)} onFinish={onFinish} />
+      <AdvancedSearch form={form} open={searchFilterAdvanced} onClose={() => setSearchFilterAdvanced(false)}>
+        <AdvancedForm form={form} onFinish={onFinish} />
+      </AdvancedSearch>
     </FormContext.Provider>
   );
 };

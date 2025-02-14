@@ -1,11 +1,13 @@
 export interface ShareLayoutProps {
     children: React.ReactNode;
-    showHeader?: boolean;
+    leftHeader?: boolean;
+    rightHeader?: boolean;
     buttons?: {
         export?: boolean;
         add?: boolean;
         reload?: boolean;
         cancel?: boolean;
+        filter?: boolean;
     };
     type?: "content" | "filter";
     handleExport?: () => void;

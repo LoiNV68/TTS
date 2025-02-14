@@ -5,4 +5,6 @@ import MyRadio from "./MyRadio";
 import FileUpload from "./UploadImage";
 import MyTextArea from "./MyTextArea";
 import Required from "./Required";
-export { MyInput, MySelect, MyDatePicker, MyRadio, FileUpload, MyTextArea, Required };
+import MyInputNumber from "./MyInputNumber";
+import MyDateRangePicker from "./MyRangerPicker";
+export { MyInput, MySelect, MyDatePicker, MyDateRangePicker, MyRadio, FileUpload, MyTextArea, MyInputNumber, Required };

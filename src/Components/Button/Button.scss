@@ -91,6 +91,19 @@
 
 }
 
+.detail-btn,
+.detail-btn:hover {
+  background-color: #fff !important;
+  border-color: #d6d3d1 !important;
+  height: 26px !important;
+  width: 70px !important;
+  color: var(--Colour-Green-700, #15803D) !important;
+  // font-family: Inter !important;
+  font-size: 13px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+}
 
 .avatar {
   width: 30px;
@@ -142,4 +155,71 @@
 
 .ant-dropdown-menu-item-active {
   background-color: transparent !important;
+}
+
+// khi label
+:where(.css-dev-only-do-not-override-nqoqt9).ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover,
+:where(.css-dev-only-do-not-override-nqoqt9).ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):hover {
+  color: unset;
+
+}
+
+
+
+
+// SelectDropdown
+
+.ant-dropdown-menu-item:first-child {
+  margin-bottom: -10% !important;
+}
+
+.menu-container {
+  margin-top: 45%;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-radius: 6px;
+  margin: 4px 0;
+
+  &:hover {
+    background-color: #fdecf0;
+    color: #d92d20 !important;
+  }
+
+
+}
+
+.ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.ant-checkbox-checked:hover .ant-checkbox-inner {
+  border-color: #ed4e6b !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #ed4e6b !important;
+  border-color: #ed4e6b !important;
+}
+
+
+
+.ant-checkbox-inner {
+  transition: all 0.3s ease-in-out;
+}
+
+.ant-dropdown-menu {
+  width: 298px;
+  height: 395px;
+  overflow-y: hidden;
+}
+
+.ant-dropdown-menu-item {
+  overflow-y: auto;
+  max-height: 290px;
+}
+
+ul.ant-dropdown-menu.ant-dropdown-menu-root.ant-dropdown-menu-vertical.ant-dropdown-menu-light.css-dev-only-do-not-override-nqoqt9 {
+  height: auto;
 }

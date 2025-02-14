@@ -54,21 +54,7 @@
 }
 
 // card
-.my-card-content {
-    background: #F5F5F4;
-    border-radius: 8px;
-    padding: 12px 12px 12px 16px;
-    display: flex;
-    flex-direction: column;
-}
 
-.my-card-content-header {
-    margin: 0 !important;
-    color: #57534e;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .ant-form-item-required,
 .label-txt {
@@ -103,5 +89,5 @@
 
 
 .ant-modal-root .ant-modal-wrap {
-    overflow: hidden !important; 
+    overflow: hidden !important;
 }

@@ -4,4 +4,5 @@ import GuestProfile from "./GuestProfile";
 import RoomAvailability from "./RoomAvailability";
 import MyAllotment from "./MyAllotment";
 import Booking from "./Booking";
-export { Dashboard, UserManagement, GuestProfile, RoomAvailability, MyAllotment, Booking };
+import NewIndividaul from "./NewIndividaul";
+export { Dashboard, UserManagement, GuestProfile, RoomAvailability, MyAllotment, Booking ,NewIndividaul};
